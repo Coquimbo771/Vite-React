@@ -1,0 +1,19 @@
+body {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-family: Arial, sans-serif;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.container {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 482px;
+  background-color: rgb(27, 25, 25);
+  margin-block: 0px;
+}

@@ -1,3 +1,4 @@
+/* 
 body {
   background-color: rgb(0, 0, 0);
   color: white;
@@ -18,17 +19,6 @@ body {
   height: 482px;
   background-color: rgb(27, 25, 25);
   margin-block: 0px;
-}
-.profile-card {
-  font-family: Arial, sans-serif;
-  display: column;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  align-content: center;
-  height: 120px;
-  width: 280px;
 }
 .profile-img {
   width: 120px;
@@ -56,4 +46,4 @@ body {
 }
 .social-button:hover {
   background-color: #555;
-}
+} */
