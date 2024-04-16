@@ -3,11 +3,14 @@ import Userdetails from './Userdetails.jsx'
 import Buttonseccion from './Buttonseccion.jsx'
 import "./Card.css"
 
-const Card = () => {
+function Card(props) {
+  const user=props.user
+  const socialLinks=user["Social-links"];
+  console.log(user);
   return (
     <div className="container">
-      <Userdetails/>
-      <Buttonseccion/>
+      <Userdetails user={user} />
+      <Buttonseccion socialLinks={socialLinks} />
     </div>
   )
 }
