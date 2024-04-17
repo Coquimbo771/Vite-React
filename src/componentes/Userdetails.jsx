@@ -1,19 +1,18 @@
+// Userdetails.jsx
 import React from "react";
 import "./Userdetails.css";
 
-const Userdetails = (props) => {
-  const user=props.user;
-  
+const Userdetails = ({ character }) => {
   return (
     <div className="profile-card">
       <img
         className="profile-img"
-        src={user.avatar}
-        alt={`avatar de ${user.name}`}
+        src={character.image}
+        alt={`avatar de ${character.name}`}
       ></img>
-      <h2 className="profile-title">{user.name}</h2>
-      <h5 className="location">{user.location}</h5>
-      <h5 className="profile-subtitle">{user.description}</h5>
+      <h2 className="profile-title">{character.name}</h2>
+      <h5 className="location">{character.location.name}</h5>
+      <h5 className="species">{character.species}</h5>
     </div>
   );
 };

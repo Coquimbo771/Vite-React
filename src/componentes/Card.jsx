@@ -1,18 +1,14 @@
-import React from 'react'
-import Userdetails from './Userdetails.jsx'
-import Buttonseccion from './Buttonseccion.jsx'
-import "./Card.css"
+// Card.jsx
+import React from 'react';
+import Userdetails from './Userdetails.jsx';
+import "./Card.css";
 
-function Card(props) {
-  const user=props.user
-  const socialLinks=user["Social-links"];
-  console.log(user);
+function Card({ character }) {
   return (
     <div className="container">
-      <Userdetails user={user} />
-      <Buttonseccion socialLinks={socialLinks} />
+      <Userdetails character={character} />
     </div>
-  )
+  );
 }
 
-export default Card
+export default Card;

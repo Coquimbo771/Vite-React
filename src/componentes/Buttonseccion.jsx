@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 import "./Buttonseccion.css";
 
 const Buttonseccion = ({ socialLinks }) => {
@@ -20,3 +20,4 @@ const Buttonseccion = ({ socialLinks }) => {
 }
 
 export default Buttonseccion;
+ */

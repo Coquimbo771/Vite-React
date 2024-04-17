@@ -9,11 +9,12 @@ body {
   align-content: center;
 }
 .container {
-  width: 300px;
   display: flex;
   flex-direction: column;
   text-align: center;
-  height: 482px;
+  max-width: 300px;
+  max-height: 500px;
+  overflow: auto;
   background-color: rgb(27, 25, 25);
   margin-block: 30px;
 }

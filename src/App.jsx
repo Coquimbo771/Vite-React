@@ -3,23 +3,42 @@ import "./App.css";
 import Card from "./componentes/Card.jsx";
 
 function App() {
-  const [users, setUsers] = useState([]);
+  const [characters, setCharacters] = useState([]);
+
   useEffect(() => {
-    fetch("https://661037cf0640280f219c98d3.mockapi.io/api/v2/users")
-      .then((res) => {
-        return res.json();
-      })
+    // Función para generar números aleatorios
+    function generarNumerosAleatorios(cantidad, min, max) {
+      const numerosAleatorios = [];
+      while (numerosAleatorios.length < cantidad) {
+        const numero = Math.floor(Math.random() * (max - min + 1)) + min;
+        if (!numerosAleatorios.includes(numero)) {
+          numerosAleatorios.push(numero);
+        }
+      }
+      return numerosAleatorios.join(",");
+    }
+
+    // Generar la cadena de números aleatorios para la API
+    const numerosAPI = generarNumerosAleatorios(8, 1, 800);
+    const apiUrl = `https://rickandmortyapi.com/api/character/${numerosAPI}`;
+
+    // Hacer la solicitud a la API
+    fetch(apiUrl)
+      .then((response) => response.json())
       .then((data) => {
-        setUsers(data);
-        console.log(data);
+        setCharacters(data);
+      })
+      .catch((error) => {
+        console.error('Error al obtener datos de la API:', error);
       });
   }, []);
+
   return (
-    <>
-      {users.map((user) => (
-        <Card key={user.id} user={user}/>
+    <div className="App">
+      {characters.map((character) => (
+        <Card key={character.id} character={character} />
       ))}
-    </>
+    </div>
   );
 }
 
