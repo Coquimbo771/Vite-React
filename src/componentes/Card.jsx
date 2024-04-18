@@ -1,4 +1,3 @@
-// Card.jsx
 import React from 'react';
 import Userdetails from './Userdetails.jsx';
 import "./Card.css";

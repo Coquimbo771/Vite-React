@@ -4,9 +4,7 @@ import Card from "./componentes/Card.jsx";
 
 function App() {
   const [characters, setCharacters] = useState([]);
-
   useEffect(() => {
-    // Función para generar números aleatorios
     function generarNumerosAleatorios(cantidad, min, max) {
       const numerosAleatorios = [];
       while (numerosAleatorios.length < cantidad) {
@@ -17,12 +15,8 @@ function App() {
       }
       return numerosAleatorios.join(",");
     }
-
-    // Generar la cadena de números aleatorios para la API
     const numerosAPI = generarNumerosAleatorios(8, 1, 800);
     const apiUrl = `https://rickandmortyapi.com/api/character/${numerosAPI}`;
-
-    // Hacer la solicitud a la API
     fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => {
@@ -32,7 +26,6 @@ function App() {
         console.error('Error al obtener datos de la API:', error);
       });
   }, []);
-
   return (
     <div className="App">
       {characters.map((character) => (

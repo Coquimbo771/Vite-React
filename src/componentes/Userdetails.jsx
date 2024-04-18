@@ -1,4 +1,3 @@
-// Userdetails.jsx
 import React from "react";
 import "./Userdetails.css";
 
