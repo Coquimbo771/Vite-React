@@ -1,26 +1,20 @@
-// Card.jsx
 import React, { useEffect, useState } from "react";
 import Userdetails from "./Userdetails.jsx";
 import "./Card.css";
 
 function Card({ character }) {
   const [episodes, setEpisodes] = useState([]);
-
   useEffect(() => {
-    // Obtener los datos de los episodios del personaje
     Promise.all(character.episode.map(url => fetch(url)))
       .then(responses => Promise.all(responses.map(res => res.json())))
       .then(episodesData => {
-        // Llenar con objetos vacíos si hay menos de 4 episodios
         const filledEpisodes = episodesData.concat(
           Array.from({ length: Math.max(0, 4 - episodesData.length) }).fill({})
         );
-        // Mostrar solo los primeros 4 episodios
         setEpisodes(filledEpisodes.slice(0, 4));
       })
       .catch(error => console.error("Error fetching episodes:", error));
   }, [character.episode]);
-
   return (
     <div className="container">
       <Userdetails character={character} />
