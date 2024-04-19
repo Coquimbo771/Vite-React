@@ -1,7 +1,6 @@
 .profile-img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+  width: 100%;
+  height:auto;
   margin-bottom: 1px;
 }
 .profile-title {
@@ -13,7 +12,7 @@
   color: green;
   margin-bottom: 0%;
 }
-.profile-subtitle {
+.species {
   font-size: 16px;
   margin-bottom: 20px;
 }

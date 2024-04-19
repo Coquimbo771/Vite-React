@@ -12,9 +12,39 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-  max-width: 300px;
-  max-height: 500px;
+  max-width: 1100px;
+  max-height: 1200px;
   overflow: auto;
   background-color: rgb(27, 25, 25);
   margin-block: 30px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.episodes-container {
+  margin-top: 20px;
+}
+
+.episode-row {
+  display: flex;
+}
+
+.episode-card {
+  flex: 1;
+  background-color: #69b687;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.episode-name {
+  font-weight: bold;
+}
+
+.episode-episode,
+.episode-air-date {
+  margin-top: 5px;
 }
