@@ -1,0 +1,42 @@
+.descripcion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileImg {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0%;
+  overflow: hidden;
+}
+img {
+  height: 300px;
+  width: 300px;
+  padding: 5px;
+  margin-bottom: 0px;
+}
+.descripcion p {
+  font-size: 25px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.profile-title {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.location {
+  font-size: 14px;
+  color: green;
+  margin-bottom: 0%;
+}
+.species {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.gender {
+  font-size: 16px;
+  color: aqua;
+}

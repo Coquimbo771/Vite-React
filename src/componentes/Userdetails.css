@@ -1,7 +1,8 @@
 .profile-img {
   width: 100%;
   height:auto;
-  margin-bottom: 1px;
+  margin-bottom: 0%;
+  border-radius: 80%;
 }
 .profile-title {
   font-size: 25px;
@@ -15,4 +16,9 @@
 .species {
   font-size: 16px;
   margin-bottom: 20px;
+}
+
+.gender {
+  font-size: 16px;
+  color: aqua;
 }

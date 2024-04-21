@@ -1,0 +1,17 @@
+.episodio {
+  padding: 20;
+  margin-top: 30px;
+  display: flex;
+  flex: 1;
+  border: 1px solid #d4d4d4;
+  background-color: rgba(4, 10, 8, 0.432);
+  font-weight: bold;
+  border-radius: 10%;
+}
+.episodioNea {
+  background-color: rgb(23, 46, 38);
+  font-size: 15px;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 20%;
+}
